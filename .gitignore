@@ -1,0 +1,10 @@
+.directory
+.DS_Store
+.idea
+*.log
+tmp/
+
+articulo-xelatex.pdf
+articulo-pdflatex.pdf
+articulo.docx
+articulo.html

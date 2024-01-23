@@ -1,0 +1,10 @@
+---
+# Aquí se especifican varias opciones de configuración del  documento
+fontsize: 11pt
+geometry: margin=2cm
+fontfamily: libertine
+fontfamily: inconsolata
+mainfont: Linux Libertine
+monofont: Inconsolata
+bibliography: references.bib
+...
