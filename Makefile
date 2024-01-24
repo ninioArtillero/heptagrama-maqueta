@@ -7,7 +7,7 @@ METADATA= metadata.yaml
 
 BIBLIO=references.bib
 
-OUTPUT=artículo
+OUTPUT=articulo
 
 TARGET=$(OUTPUT)-xelatex.pdf $(OUTPUT)-pdflatex.pdf $(OUTPUT).html $(OUTPUT).docx
 
