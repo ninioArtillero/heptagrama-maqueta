@@ -3,6 +3,7 @@
 .idea
 *.log
 tmp/
+*.tmp
 
 articulo-xelatex.pdf
 articulo-pdflatex.pdf
