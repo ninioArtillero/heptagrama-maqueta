@@ -5,7 +5,6 @@
 tmp/
 *.tmp
 
-articulo-xelatex.pdf
-articulo-pdflatex.pdf
-articulo.docx
-articulo.html
+*.pdf
+*.docx
+*.html
