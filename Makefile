@@ -9,7 +9,7 @@ BIBLIO=references.bib
 
 OUTPUT=manual_de_autores
 
-TARGET=$(OUTPUT).pdf $(OUTPUT).html $(OUTPUT).docx
+TARGET=$(OUTPUT).pdf $(OUTPUT)-iclc.pdf $(OUTPUT).html $(OUTPUT).docx
 
 
 # Objetivos
@@ -23,7 +23,7 @@ doc: $(OUTPUT).docx
 html: $(OUTPUT).html
 
 clean:
-	rm -f $(OUTPUT).pdf $(OUTPUT).html $(OUTPUT).docx
+	rm -f $(OUTPUT).pdf $(OUTPUT)-iclc.pdf $(OUTPUT).html $(OUTPUT).docx
 
 # Comandos
 $(OUTPUT).html: $(SOURCE) $(BIBLIO)
@@ -35,6 +35,7 @@ $(OUTPUT).html: $(SOURCE) $(BIBLIO)
 		--output $(OUTPUT).html \
 		$(SOURCE)
 
+# TODO: Actualizar al templete heptagrama.latex
 $(OUTPUT).pdf: $(SOURCE) $(BIBLIO) pandoc/iclc.latex pandoc/iclc.sty
 	pandoc \
 		--from=markdown+rebase_relative_paths \
@@ -43,6 +44,19 @@ $(OUTPUT).pdf: $(SOURCE) $(BIBLIO) pandoc/iclc.latex pandoc/iclc.sty
 		--pdf-engine=xelatex \
 		--metadata-file $(METADATA) \
 		--output $(OUTPUT).pdf \
+		--lua-filter=pandoc/lua-filters/abc-to-sheet.lua \
+		$(SOURCE)
+
+# Con plantilla del ICLC para comparación
+$(OUTPUT)-iclc.pdf: $(SOURCE) $(BIBLIO) pandoc/iclc.latex pandoc/iclc.sty
+	pandoc \
+		--from=markdown+rebase_relative_paths \
+		--template=pandoc/iclc.latex \
+		--citeproc --number-sections \
+		--pdf-engine=xelatex \
+		--metadata-file $(METADATA) \
+		--lua-filter=pandoc/lua-filters/abc-to-sheet.lua \
+		--output $(OUTPUT)-iclc.pdf \
 		$(SOURCE)
 
 $(OUTPUT).docx: $(SOURCE) $(BIBLIO)

@@ -1,6 +1,8 @@
 ---
 # Aquí se especifican varias opciones de configuración del  documento
 fontsize: 11pt
+classoption:
+- twocolumn
 geometry: margin=2cm
 fontfamily: libertine
 fontfamily: inconsolata
