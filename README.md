@@ -1,9 +1,10 @@
 # Propuesta de automatización de maquetado para la revista Heptagrama
 
 Esta propuesta involucra dos pasos:
-1. Los autores envían sus textos como documentos `.md`, utilizando [_Markdown_](https://pandoc.org/MANUAL.html#pandocs-markdown) para especificar el formato.
+1. Los autores envían sus textos como documentos `.md`, utilizando [Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) para especificar el formato.
    1. Junto a su texto es necesario incluir un archivo `.bib` con la bibliografía en formato [biblatex](https://es.overleaf.com/learn/latex/Bibliography_management_in_LaTeX#The_bibliography_file).
-1. Utilizando el software [Pandoc](https://pandoc.org) una misma fuente[^2] se renderiza a diversos formatos de salida. Aquí ejemplificados: PDF, HTML y DOCX.
+1. Utilizando el software [Pandoc](https://pandoc.org) una misma fuente se renderiza a diversos formatos de salida.[^2]
+Aquí ejemplificados: PDF, HTML y DOCX.
    1. La maqueta se elabora para los formatos intermedios: hay una para LaTex y otra para HTML. Se encuentran en el directorio `pandoc/`.
 
 [^2]: [Metodología _single source publishing_ en el libro de perrotuerto](https://prolibreros.gitlab.io/docs/tutorial-ssp/#metodologia).
@@ -18,7 +19,7 @@ El desarrollo de esta propuesta consta de los siguientes pasos:
 
 ## Build
 
-Desde este directorio ejecutar `make` para producir 3 documentos:  **manual_de_autores.pdf**, **manual_de_autores-iclc.pdf**, **manual_de_autores.docx** y **manual_de_autores.html**.
+Desde este directorio ejecutar `make` para producir 4 documentos:  **manual_de_autores.pdf**, **manual_de_autores-iclc.pdf**, **manual_de_autores.docx** y **manual_de_autores.html**.
 También se puede crear cada formato independientemente, por ejemplo `make pdf` producirá el archivo PDF.
 Para borrar estos archivos ejecutar `make clean`.
 
