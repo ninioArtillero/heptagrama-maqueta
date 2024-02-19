@@ -21,12 +21,20 @@ El desarrollo de esta propuesta consta de los siguientes pasos:
 Desde este directorio ejecutar `make` para producir 4 documentos:  **articulo-xelatex.pdf**, **articulo-pdflatex.pdf**, **articulo.docx** y **articulo.html**.
 Para borrarlos ejecutar `make clean`.
 
-El comando `make` ejecuta el procedimiento descrito en el archivo `Makefile`.
+El comando `make` ejecuta el procedimiento descrito en el archivo `Makefile`.[^make]
+
+[^make]: [https://www.gnu.org/software/make/](https://www.gnu.org/software/make/).
 
 ### Dependencias
 
 Para producir los documentos PDF es necesario instalar lo siguiente:
 
+* Make
+  * MacOS: Se recomienda utilizar el administrador de paquetes [Homebrew](http://brew.sh/).
+  Correr `brew update` en la terminal y en seguida `brew install make`. Alternativamente se puede instalar [Xcode](https://developer.apple.com/support/xcode/) desde la App Store y seguir [estas instrucciones](https://stackoverflow.com/questions/10265742/how-to-install-make-and-gcc-on-a-mac).
+  * Windows: Se recomienda utilizar el administrador de paquetes [Chocolatey](https://chocolatey.org/). 
+  Correr en terminal `choco install pandoc`.
+  También se puede instalar directamente [Make for Windows](https://gnuwin32.sourceforge.net/packages/make.htm).
 * Pandoc. [Instrucciones oficiales de instalación](http://pandoc.org/installing.html).
   * MacOS: Se recomienda utilizar el administrador de paquetes [Homebrew](http://brew.sh/). Correr `brew update` en la terminal y en seguida `brew install pandoc`.
   * Windows: Se recomienda utilizar el administrador de paquetes [Chocolatey](https://chocolatey.org/). Correr en terminal `choco install pandoc`.
