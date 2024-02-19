@@ -12,14 +12,15 @@ El desarrollo de esta propuesta consta de los siguientes pasos:
 
   * [x] Importar maqueta de referencia.[^1]
   * [x] Crear repositorio con introducción a la propuesta.
-  * [ ] Adaptar la maqueta al diseño de Heptagrama.
+  * [ ] Hacer una maqueta membretada con el diseño de Heptagrama.
   * [ ] Automatizar el procesamiento del material del autor.
-  * [ ] Elaborar un manual para autores.
+  * [x] Elaborar un manual para autores.
 
 ## Build
 
-Desde este directorio ejecutar `make` para producir 4 documentos:  **articulo-xelatex.pdf**, **articulo-pdflatex.pdf**, **articulo.docx** y **articulo.html**.
-Para borrarlos ejecutar `make clean`.
+Desde este directorio ejecutar `make` para producir 3 documentos:  **manual_de_autores.pdf**, **manual_de_autores-iclc.pdf**, **manual_de_autores.docx** y **manual_de_autores.html**.
+También se puede crear cada formato independientemente, por ejemplo `make pdf` producirá el archivo PDF.
+Para borrar estos archivos ejecutar `make clean`.
 
 El comando `make` ejecuta el procedimiento descrito en el archivo `Makefile`.[^make]
 
