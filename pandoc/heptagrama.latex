@@ -480,7 +480,16 @@ $else$
 $endif$
 \subtitle{$subtitle$}
 $endif$
-\author{$for(author)$$author$$sep$ \and $endfor$}
+$if(author)$
+\author{
+$for(author)$
+  $author.name$ \\
+  $author.affiliation$\\
+  \href{mailto:$author.email$}{$author.email$}
+  $sep$ \and
+$endfor$
+}
+$endif$
 \date{$date$}
 $if(beamer)$
 $if(institute)$
