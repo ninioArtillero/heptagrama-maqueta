@@ -31,6 +31,7 @@ $(OUTPUT).html: $(SOURCE) $(BIBLIO) pandoc/iclc.html
 		--from=markdown+rebase_relative_paths \
 		--template=pandoc/iclc.html \
 		--citeproc --number-sections \
+		--fail-if-warnings \
 		--metadata-file $(METADATA) \
 		--output $(OUTPUT).html \
 		$(SOURCE)
@@ -40,6 +41,7 @@ $(OUTPUT).pdf: $(SOURCE) $(BIBLIO) pandoc/heptagrama.latex
 		--from=markdown+rebase_relative_paths \
 		--template=pandoc/heptagrama.latex \
 		--citeproc --number-sections \
+		--fail-if-warnings \
 		--pdf-engine=xelatex \
 		--metadata-file $(METADATA) \
 		--output $(OUTPUT).pdf \
@@ -53,6 +55,7 @@ $(OUTPUT)-iclc.pdf: $(SOURCE) $(BIBLIO) pandoc/iclc.latex pandoc/iclc.sty
 		--from=markdown+rebase_relative_paths \
 		--template=pandoc/iclc.latex \
 		--citeproc --number-sections \
+		--fail-if-warnings \
 		--pdf-engine=xelatex \
 		--metadata-file $(METADATA) \
 		--lua-filter=pandoc/lua-filters/abc-to-sheet.lua \
@@ -63,6 +66,7 @@ $(OUTPUT).docx: $(SOURCE) $(BIBLIO)
 	pandoc \
 		--from=markdown+rebase_relative_paths \
 		--citeproc --number-sections \
+		--fail-if-warnings \
 		--metadata-file $(METADATA) \
 		--output $(OUTPUT).docx \
 		$(SOURCE)
