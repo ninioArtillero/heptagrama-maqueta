@@ -19,7 +19,7 @@ keywords:
   - Ejemplo
   - Plantilla
   - Editorial
-...
+---
 
 # Introducción
 
